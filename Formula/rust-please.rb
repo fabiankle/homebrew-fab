@@ -1,5 +1,5 @@
 
-require_relative "../CustomDownloadStrategy"
+require_relative "../custom_download_strategy"
 
 class RustPlease < Formula
   desc "Please CLI (Rust port)"
