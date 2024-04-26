@@ -1,4 +1,4 @@
-# Taken from https://roamdigital.com/engineering/distributing-internal-development-tools-using-homebrew/;
+# Taken from https://github.com/Roamltd/roam-blog-code-snippets-public/blob/main/Distributing%20internal%20development%20tools%20using%20Homebrew/custom_download_strategy.rb
 # This is based on the following, with minor fixes.
 # https://github.com/Homebrew/brew/blob/193af1442f6b9a19fa71325160d0ee2889a1b6c9/Library/Homebrew/compat/download_strategy.rb#L48-L157
 # GitHubPrivateRepositoryDownloadStrategy downloads contents from GitHub
