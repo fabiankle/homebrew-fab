@@ -15,9 +15,25 @@ class TngTaia < Formula
    system "npm", "install"
    system "npm", "run", "deploy-mac-arm64"
    app_name = "deploy/TNG-TAIA-darwin-arm64/TNG-TAIA.app"
-   app_dir = "#{buildpath}/#{app_name}"
-   libexec.install app_dir
-   bin.install_symlink "#{libexec}/#{app_name}/Contents/MacOS/#{app_name}" => "tng-taia"
+#    app_path = "#{buildpath}/#{app_name}"
+
+   prefix.install "#{app_name}"
+   bin.install_symlink "#{prefix}/TNG-TAIA.app/Contents/MacOS/TNG-TAIA"
+   system "echo $(whoami)"
+   system "mv", "#{prefix}/TNG-TAIA.app", "#{ENV['HOME']}/Applications/"
+
+#    libexec.install app_path
+
+#     app_dir="#{libexec}/TNG-TAIA.app"
+#     bin.install Dir["#{app_name}"]
+#    bin.install_symlink app_path
+  # Move the app to the user's Applications directory
+#    user_applications_path = "#{ENV['HOME']}/Applications"
+#    mkdir_p user_applications_path
+#    mv app_dir, user_applications_path
+
+#    bin.install Dir["deploy/TNG-TAIA-darwin-arm64/TNG-TAIA.app"]
+#    system "codesign", "--remove-signature", "#{bin}/TNG-TAIA.app"
  end
 
 end
