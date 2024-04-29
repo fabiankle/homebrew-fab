@@ -20,7 +20,7 @@ class TngTaia < Formula
    prefix.install "#{app_name}"
    bin.install_symlink "#{prefix}/TNG-TAIA.app/Contents/MacOS/TNG-TAIA"
    system "echo $(whoami)"
-   system "mv", "#{prefix}/TNG-TAIA.app", "/Applications/"
+   system "mv", "#{prefix}/TNG-TAIA.app", "/Users/$USER/Applications/"
 
 #    libexec.install app_path
 
